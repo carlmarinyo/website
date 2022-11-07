@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&family=Oswald:wght@700&family=Roboto+Condensed:wght@700&display=swap');
+@font-face {
+    font-family:sunday ;
+    src: url(/font/SUNDAY.ttf);
+
+
+    font-family: gravity;
+    src: url(/font/Gravity-Regular.otf)
+}
+.wrapper {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+ 
+}
+*{
+    padding: 0;
+    margin: 0;
+   
+}
+ body {
+    display: grid;
+    min-height: 100vh;
+}
+nav {
+    width: 80%;
+    height: 80px;
+    justify-content: center;
+    margin: 0 10%;
+    
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    list-style: none;    
+    padding-top: 20px;
+}
+nav ul li a {
+   padding:50px;
+   font-size: 30px;
+   background-image: linear-gradient(90deg,rgb(0, 16, 255) 30%, rgb(0, 136, 255) 30%, rgb(0, 0, 255) 30%, rgb(60, 0, 255) 30%, rgb(115, 0, 255) 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   
+   text-decoration: none;
+ 
+}
+/* first background image (home */
+.front-banner {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.168),rgba(0, 0, 0,0.5), rgba(0, 0, 0, 0.5)), url('backg.gif');
+    background-size: cover;
+    background-position-x: 20px;
+}
+#welcome {
+    margin-top: 5%;
+   font-size: 200px;
+   background: linear-gradient(90deg, rgba(0,38,147,1) 10%, rgba(0,48,255,1) 25%, rgba(80,0,255,1) 43%, rgba(59,0,255,1) 60%, rgba(80,0,255,1) 73%, rgba(115,0,255,1) 88%, rgb(98, 0, 255) 100%);
+   background-size: 1500px;
+   letter-spacing: 5px;
+   word-spacing: 5px;
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   animation: animate 20s linear infinite;
+ }
+ @keyframes animate{
+0% {
+    background-position: 0;
+
+}
+100%{
+    background-position: 1500%;
+  
+}
+ }
+ .subtext {
+    font-size: 50px;
+    padding-top: 20px;
+    color: white;   
+    text-align: center;
+ }
+
+ .discord {
+    background-color: rgb(88,101,242);
+    color: white;
+    border-radius: 50px;
+    font-size: 20px;
+    height: 80px;
+    width: 500px;
+    margin: 100px 35%;
+    border: none;
+    letter-spacing: 1.5px;
+    font-family: discord;
+   
+   
+ }
+/* For effects (hover etc)*/
+.discord:hover{
+    cursor: pointer;
+    background: rgb(146, 155, 255);
+    color: rgb(69, 86, 209);
+    box-shadow: 0px 0px 5px #3d47b5,
+                0px 0px 30px #3d47b5,
+                0px 0px 30px #3d47b5,
+                0px 0px 100px rgb(67, 67, 214);   
+                
+    margin-bottom: 0px;
+}
+
+ /* second part */
+#part2 {
+    height: 100vh;
+    width: 100%;
+    background: rgb(22,22,22);
+    display: flex;
+  
+}
+.left {
+    background: linear-gradient(rgba(5, 5, 5, 0.2),rgba(0, 0, 0,0.7), rgba(0, 0, 0, 0.8)), url('pic1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:50%;
+    height: 100vh;
+}
+.right {
+    background: linear-gradient(rgba(5, 5, 5, 0.2),rgba(0, 0, 0,0.7), rgba(0, 0, 0, 0.8)), url('pic2.jpeg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width:50%;
+    height: 100vh;
+
+}
+/* hover animations for second part */
+.left:hover{
+    transition: 5s ease-in;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0,0.2), rgba(0, 0, 0, 0.2)), url('pic1bg.gif');
+}
+     .right:hover{ 
+        background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0,0.2), rgba(0, 0, 0, 0.2)), url('pic2bg.gif');
+     }
+
+.inside {
+margin: 20% 0;
+color:white
+}
+
+.text {
+    color: rgb(140, 205, 233);
+    padding: 0 50px;
+    font-size: 25px;
+    word-spacing: 5px;
+    text-shadow: 1px 0 black;
+    z-index: 1;
+    margin: 10px;
+    padding-top: 35px;
+}
+ 
+.title {
+    background:linear-gradient(90deg, rgb(33, 42, 163)80%, rgb(84, 28, 143) 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    height: 100%;
+  width: 46%;
+    font-size: 80px;
+    font-family: gravity;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   text-align: left;
+   padding-left: 50px;
+  position: absolute; 
+top: 105%;
+}
+/* for line under title */
+.title::after{
+    content:'';
+    height:2px;
+    width:0;
+    background-color: rgb(13, 17, 30);
+    display: block;
+    transition: .5s ease-in-out;
+    position: relative; top: 20px; right: 100%px;
+   
+}
+.title:hover::after{
+    content: '';
+    height: 2px;
+    width: 47%;
+    background-color: rgb(47, 133, 190);
+    display: block; 
+}
+
+/* social media accs part */
+.last {
+height: 100vh;
+width: 100%;
+background: linear-gradient(30deg, rgb(9, 22, 49) 29%, rgb(6, 20, 52) 60%, rgb(20, 32, 64) 88%, rgb(17, 23, 39)100%);
+}
+#contacts {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 80px;
+    color: white;
+    background-image: linear-gradient(90deg,rgb(0, 16, 255) 30%, rgb(0, 136, 255) 30%, rgb(0, 0, 255) 30%, rgb(60, 0, 255) 30%, rgb(115, 0, 255) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.contact-box {
+    width: 90%;
+    height:60%;
+    margin: 5% 5%;
+    display: flex;    
+}
+
+/* social media list */
+.last ul {
+    position: relative;
+    z-index: 2;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+.last ul li {
+  list-style: none;
+  padding: 10% 50px;
+
+ }
+.last ul li a {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: white;
+    border: 2px solid rgba(255,255,255, 0.3);
+    font-size: 100px;
+    border-radius: 10px;
+    color: white;
+  padding: 20px;
+    transition: 0.5s all;
+    backdrop-filter: blur(2px);
+ box-shadow: 2px 2px black;
+ overflow: hidden;
+transition-delay: 0.5;
+}
+/* glow effect on icons */
+.last ul li a:hover{
+    content:"";
+    transform: translateY(-20px);
+    background-image: linear-gradient(90deg,rgb(0, 16, 255) 30%, rgb(0, 136, 255) 30%, rgb(0, 0, 255) 30%, rgb(60, 0, 255) 30%, rgb(115, 0, 255) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border:2px solid rgb(0, 0, 255);
+    box-shadow: 0px 0px 5px rgb(0, 0, 255),
+    0px 0px 15px rgb(0, 136, 255),
+    0px 0px 30px rgb(0, 16, 255),
+    0px 0px 100px rgb(115, 0, 255);
+}
+
+/* for footer */
+.footer{
+    position: sticky;
+    top:100%;
+    background-color: rgb(22,22,22);
+    height: 45vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.footer-box{
+    position: absolute;
+
+    width: 80%;
+    height: 70%;
+    margin: 0 10%;
+    
+}
+.footer-inside{
+    display: flex;  
+    justify-content: center;
+    padding: 50px 50%;
+    
+}
+.footer-inside  a{
+    padding: 0px 50px;
+    text-decoration: none;
+   color: white;
+        top: 5%;
+    bottom: 5%;
+}
+.footer-inside a:hover {
+    text-decoration: underline;
+     background-image: linear-gradient(90deg,rgb(0, 16, 255) 30%, rgb(0, 136, 255) 30%, rgb(0, 0, 255) 30%, rgb(60, 0, 255) 30%, rgb(115, 0, 255) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.footer-outside{
+    margin-top: 10px;
+   text-align: center;
+   color: white;
+   display: block;
+   
+   position: relative; 
+   bottom: 20%;
+}
+.footer-outside a{
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer-outside h1 a {
+    font-size: 30px;
+    background-image: linear-gradient(90deg,rgb(0, 16, 255) 30%, rgb(0, 136, 255) 30%, rgb(0, 0, 255) 30%, rgb(60, 0, 255) 30%, rgb(115, 0, 255) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.footer-outside a:hover{
+    text-decoration: underline;
+    background-image: linear-gradient(90deg,rgb(0, 16, 255) 30%, rgb(0, 136, 255) 30%, rgb(0, 0, 255) 30%, rgb(60, 0, 255) 30%, rgb(115, 0, 255) 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+}
+.footer-credits{
+    padding-top: 20px;
+    opacity: 0.8;
+    font-size: 10px;
+    text-align: center;
+    color: grey;
+    margin-bottom: 20px;
+}
+.footer-outside .footer-credits a{
+    color: rgb(94, 70, 235);
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    top: 5%;
+    bottom: 10%;
+    
+}
